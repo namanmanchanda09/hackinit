@@ -23,19 +23,28 @@ class Speech extends Component {
         super()
         this.state = {
             listening: false,
-            write:''
+            write:'',
+            isLoading: false
         }
         this.toggleListen = this.toggleListen.bind(this)
         this.handleListen = this.handleListen.bind(this)
     }
 
     componentDidMount(){
+        this.setState({ isLoading: true })
+        console.log(this.state.isLoading)
          fire.database().ref('users/' + store.curuser.uid).once('value', (snapshot)=> {
+             var username = snapshot.val().content
             this.setState({
-                write: snapshot.val().content
+                write: username
             }) 
+             this.setState({ isLoading: false })
+             console.log('state changed')
+             console.log(this.state.write)
         });
-        document.getElementById('final').innerHTML=this.state.write;
+        document.getElementById('final').textContent += this.state.write;
+        
+
     }
 
     toggleListen() {
@@ -115,12 +124,19 @@ class Speech extends Component {
     }
 
     render() {
+        const { isLoading } = this.state
         return (
             <div style={container}>
-                <button id='microphone-btn' style={button} onClick={this.toggleListen} />
-                <div id='interim' style={interim}></div>
-                <div id='final' style={final}></div>
+                {
+                    isLoading?<p>Loading....</p> : 
+                        <div >
+                            <button id='microphone-btn' style={button} onClick={this.toggleListen} />
+                            <div id='interim' style={interim}></div>
+                            <div id='final' style={final}></div>
+                        </div>
+                }
             </div>
+            
         )
     }
 }
