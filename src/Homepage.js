@@ -6,6 +6,7 @@ import store from './Store';
 import Loginbtn from './Loginbtn';
 import Speech from './Speech';
 import 'tachyons';
+import Bookpage from './Bookpage';
 
 @observer
 class Homepage extends Component {
@@ -35,6 +36,7 @@ class Homepage extends Component {
                                         : null
                                 }
                                 <button onClick={() => this._signOut()} style={{ borderRadius: '8px' }} className='f6 link dim dr3 ph3 pv2 mb2 white bg-purple tc'>Sign Out</button>
+                                <button onClick={()=>{return(<Bookpage />)}} style={{ borderRadius: '8px' }} className='f6 link dim dr3 ph3 pv2 mb2 white bg-purple tc'>Dashboard</button>
                                <div>
                                 {
                                     store.curuser ? <Speech /> : null
