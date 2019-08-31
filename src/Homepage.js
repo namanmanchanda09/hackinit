@@ -12,6 +12,9 @@ import Bookpage from './Bookpage';
 class Homepage extends Component {
     constructor(props){
         super(props);
+        this.state={
+            showDash:false
+        }
     }
    
     _signOut() {
@@ -21,6 +24,11 @@ class Homepage extends Component {
             console.log("could not sign out")
         });
         window.location.reload()
+    }
+    handleclick(){
+        this.setState({
+            showDash:true
+        })
     }
 
     render() {
@@ -36,7 +44,12 @@ class Homepage extends Component {
                                         : null
                                 }
                                 <button onClick={() => this._signOut()} style={{ borderRadius: '8px' }} className='f6 link dim dr3 ph3 pv2 mb2 white bg-purple tc'>Sign Out</button>
-                                <button onClick={()=>{return(<Bookpage />)}} style={{ borderRadius: '8px' }} className='f6 link dim dr3 ph3 pv2 mb2 white bg-purple tc'>Dashboard</button>
+                                <button onClick={()=>this.handleclick()} style={{ borderRadius: '8px' }} className='f6 link dim dr3 ph3 pv2 mb2 white bg-purple tc'>Dashboard</button>
+                                <div>
+                                    {
+                                        this.state.showDash?<Bookpage/>:null
+                                    }
+                                </div>
                                <div>
                                 {
                                     store.curuser ? <Speech /> : null
