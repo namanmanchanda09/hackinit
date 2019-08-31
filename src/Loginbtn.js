@@ -3,6 +3,7 @@ import { observer } from 'mobx-react';
 import fire from './fire';
 import firebase, { app } from 'firebase';
 import store from './Store';
+import 'tachyons';
 
 @observer
 class Loginbtn extends Component {
@@ -57,9 +58,9 @@ class Loginbtn extends Component {
     render() {
         return (
             <div style={{ textAlign: 'center' }}>
-                            <h1>Login</h1>
+                            <h1 className='f3 f1-m f-headline-l'>Login</h1>
                             <br />
-                            <button onClick={() => this._signIn()}>Sign In</button>
+                            <button onClick={() => this._signIn()} className='f6 link dim dr3 ph3 pv2 mb2 white bg-purple tc' style={{'borderRadius':"10px"}}>Sign In</button>
 
             </div>
         );
