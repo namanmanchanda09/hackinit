@@ -58,7 +58,7 @@ class Loginbtn extends Component {
     render() {
         return (
             <div style={{ textAlign: 'center' }}>
-                            <h1 className='f3 f1-m f-headline-l'>Login</h1>
+                            <h1 className='f3 f1-m f-headline-l'>Volio</h1>
                             <br />
                             <button onClick={() => this._signIn()} className='f6 link dim dr3 ph3 pv2 mb2 white bg-purple tc grow' style={{'borderRadius':"10px"}}>Sign In</button>
 
