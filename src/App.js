@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import Homepage from './Homepage';
+import { observer } from 'mobx-react';
 
+@observer
 class App extends Component {
     render() {
         return (
             <div>
-                <h1>coding</h1>
+                <Homepage />
             </div>
         );
     }
