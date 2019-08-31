@@ -1,5 +1,9 @@
 'use strict'
-import React, { Component } from "react"
+import React, { Component } from "react";
+import fire from './fire';
+import firebase, { app } from 'firebase';
+import store from "./Store";
+import { observer } from 'mobx-react';
 
 //------------------------SPEECH RECOGNITION-----------------------------
 
@@ -12,16 +16,26 @@ recognition.lang = 'en-US'
 
 
 //------------------------COMPONENT-----------------------------
-
+@observer
 class Speech extends Component {
 
     constructor() {
         super()
         this.state = {
-            listening: false
+            listening: false,
+            write:''
         }
         this.toggleListen = this.toggleListen.bind(this)
         this.handleListen = this.handleListen.bind(this)
+    }
+
+    componentDidMount(){
+         fire.database().ref('users/' + store.curuser.uid).once('value', (snapshot)=> {
+            this.setState({
+                write: snapshot.val().content
+            }) 
+        });
+        document.getElementById('final').innerHTML=this.state.write;
     }
 
     toggleListen() {
@@ -33,6 +47,16 @@ class Speech extends Component {
     handleListen() {
 
         console.log('listening?', this.state.listening)
+
+        if(!this.state.listening){
+            var temp=document.getElementById('final').textContent
+            this.setState((prevState)=>({
+                write:prevState.write + temp
+            }))
+            fire.database().ref('users/' + store.curuser.uid).update({
+                content:this.state.write
+            })
+        }
 
         if (this.state.listening) {
             recognition.start()
@@ -63,6 +87,7 @@ class Speech extends Component {
             }
             document.getElementById('interim').innerHTML = interimTranscript
             document.getElementById('final').innerHTML = finalTranscript
+            console.log(finalTranscript)
 
             //-------------------------COMMANDS------------------------------------
 
@@ -79,6 +104,7 @@ class Speech extends Component {
                 }
             }
         }
+
 
         //-----------------------------------------------------------------------
 

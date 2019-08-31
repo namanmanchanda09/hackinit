@@ -20,7 +20,8 @@ class Loginbtn extends Component {
                     if (snapshot.val() == null) {
                         fire.database().ref('/users/').child(store.curuser.uid).set({
                             name: store.curuser.displayName,
-                            email: store.curuser.email                      
+                            email: store.curuser.email ,
+                            content:""                     
                         });
                     }
                 });                

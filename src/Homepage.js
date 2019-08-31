@@ -34,7 +34,12 @@ class Homepage extends Component {
                                         : null
                                 }
                                 <button onClick={() => this._signOut()} style={{ borderRadius: '8px' }}>Sign Out</button>
-                                <Speech />
+                               <div>
+                                {
+                                    store.curuser ? <Speech /> : null
+                                }
+                               </div>
+                                
                             </div>
                         </div>
                         :
