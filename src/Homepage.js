@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import firebase, { app } from 'firebase';
+import { Link } from 'react-router-dom';
 import store from './Store';
-// import './Homepage.css';
 import Loginbtn from './Loginbtn';
 import Speech from './Speech';
 import 'tachyons';
-import Bookpage from './Bookpage';
 
 @observer
 class Homepage extends Component {
@@ -44,12 +43,7 @@ class Homepage extends Component {
                                         : null
                                 }
                                 <button onClick={() => this._signOut()} style={{ borderRadius: '8px' }} className='f6 link dim dr3 ph3 pv2 mb2 white bg-purple tc'>Sign Out</button>
-                                <button onClick={()=>this.handleclick()} style={{ borderRadius: '8px' }} className='f6 link dim dr3 ph3 pv2 mb2 white bg-purple tc'>Dashboard</button>
-                                <div>
-                                    {
-                                        this.state.showDash?<Bookpage/>:null
-                                    }
-                                </div>
+                                <Link to="/dash" style={{ borderRadius: '8px' }} className='f6 link dim dr3 ph3 pv2 mb2 white bg-purple tc'>Dashboard</Link>
                                <div>
                                 {
                                     store.curuser ? <Speech /> : null
