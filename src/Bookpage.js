@@ -1,8 +1,9 @@
 import React from 'react';
+import Card from './Card'
 
 const Bookpage = () =>{
     return(
-        <h1>Hello</h1>
+        <Card />
     )
 }
 
