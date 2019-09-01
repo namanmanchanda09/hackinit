@@ -21,38 +21,38 @@ render(){
             </div>
             </Link>
 
-            <div className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>           
+            <Link to="/dash/book2" className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>           
             <div>
                 <h2>Harry Potter and the prison of azkaban</h2>
                 <p>Click me!</p>
             </div>
-            </div>
+            </Link>
 
 
-            <div className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>          
+            <Link to="/dash/book3" className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>          
             <div>
                 <h2>The monk who sold his ferrai.</h2>
                 <p>Click me!</p>
             </div>
-            </div>
+            </Link>
 
 
 
-            <div className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>   
+            <Link to="/dash/book4" className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>   
             <div>
                 <h2>The autobiography of a Yogi.</h2>
                 <p>Click me!</p>
             </div>
-            </div>
+            </Link>
 
 
 
-            <div className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>        
+            <Link to="/dash/book5" className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>        
             <div>
                 <h2>Becoming Steve jobs</h2>
                 <p>Click me!</p>
             </div>
-            </div>
+            </Link>
 
         </div>
 
