@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 
 const Card = () =>{
@@ -6,7 +6,7 @@ const Card = () =>{
     return(
         <div>
             
-            <div className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
+            <div className='mw5 center br3 pa3 pa4-ns mv3 ba b--black-10 grow bg-light-green'>
             
             
             <div>
@@ -17,7 +17,7 @@ const Card = () =>{
 
             </div>
 
-            <div className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
+            <div className='mw5 center br3 pa3 pa4-ns mv3 ba b--black-10 grow bg-light-green'>
             
             
             <div>
@@ -29,7 +29,7 @@ const Card = () =>{
             </div>
 
 
-            <div className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
+            <div className='mw5 center br3 pa3 pa4-ns mv3 ba b--black-10 grow bg-light-green'>
             
             
             <div>
@@ -42,7 +42,7 @@ const Card = () =>{
 
 
 
-            <div className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
+            <div className='mw5 center br3 pa3 pa4-ns mv3 ba b--black-10 grow bg-light-green'>
             
             
             <div>
@@ -55,7 +55,7 @@ const Card = () =>{
 
 
 
-            <div className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
+            <div className='mw5 center br3 pa3 pa4-ns mv3 ba b--black-10 grow bg-light-green'>
             
             
             <div>
