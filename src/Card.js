@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-=======
-import React from 'react'
->>>>>>> f0b0f71c5187fd4d54b32a9d8a023cc15f75fb72
+import 'tachyons'
 
 
 class Card extends Component{
@@ -15,85 +12,77 @@ class Card extends Component{
 // }
 render(){
     return(
-        <div>
-<<<<<<< HEAD
+        <div className='tc'>
             <Link to="/">Home</Link>
+            <br />
 
-            <Link to="/dash/book1" className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
-=======
+
             
-            <div className='mw5 center br3 pa3 pa4-ns mv3 ba b--black-10 grow bg-light-green'>
-            
-            
->>>>>>> f0b0f71c5187fd4d54b32a9d8a023cc15f75fb72
-            <div>
+            <Link to="/dash/book1" className='bg-purple dib br3 pa3 ma2 grow bw2 shadow-5'>
+            <div className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>
                 <h2>The Alchemist</h2>
                 <p>Click me!</p>
             </div>
             </Link>
 
-<<<<<<< HEAD
+
+            
+
+
+            <div className='bg-black dib br3 pa3 ma2 grow bw2 shadow-5'>
             <Link to="/dash/book2" className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>           
-=======
-
-            </div>
-
-            <div className='mw5 center br3 pa3 pa4-ns mv3 ba b--black-10 grow bg-light-green'>
-            
-            
->>>>>>> f0b0f71c5187fd4d54b32a9d8a023cc15f75fb72
             <div>
                 <h2>Harry Potter and the prison of azkaban</h2>
                 <p>Click me!</p>
             </div>
             </Link>
-
-
-<<<<<<< HEAD
-            <Link to="/dash/book3" className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>          
-=======
             </div>
 
 
-            <div className='mw5 center br3 pa3 pa4-ns mv3 ba b--black-10 grow bg-light-green'>
-            
-            
->>>>>>> f0b0f71c5187fd4d54b32a9d8a023cc15f75fb72
+            <div className='bg-light-blue dib br3 pa3 ma2 grow bw2 shadow-5'>
+            <Link to="/dash/book3" className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>          
             <div>
                 <h2>The monk who sold his ferrai.</h2>
                 <p>Click me!</p>
             </div>
-            </Link>
+            </Link></div>
 
 
-
-<<<<<<< HEAD
+            <div className='bg-light-red dib br3 pa3 ma2 grow bw2 shadow-5'>
             <Link to="/dash/book4" className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>   
-=======
-            <div className='mw5 center br3 pa3 pa4-ns mv3 ba b--black-10 grow bg-light-green'>
-            
-            
->>>>>>> f0b0f71c5187fd4d54b32a9d8a023cc15f75fb72
             <div>
                 <h2>The autobiography of a Yogi.</h2>
                 <p>Click me!</p>
             </div>
-            </Link>
+            </Link></div>
 
 
-
-<<<<<<< HEAD
+            <div className='bg-purple dib br3 pa3 ma2 grow bw2 shadow-5'>
             <Link to="/dash/book5" className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>        
-=======
-            <div className='mw5 center br3 pa3 pa4-ns mv3 ba b--black-10 grow bg-light-green'>
-            
-            
->>>>>>> f0b0f71c5187fd4d54b32a9d8a023cc15f75fb72
             <div>
                 <h2>Becoming Steve jobs</h2>
                 <p>Click me!</p>
             </div>
-            </Link>
+            </Link></div>
+
+
+            <div className='bg-purple dib br3 pa3 ma2 grow bw2 shadow-5'>
+            <Link to="/dash/book5" className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>        
+            <div>
+                <h2>The notebook</h2>
+                <p>Click me!</p>
+            </div>
+            </Link></div>
+
+
+
+            <div className='bg-purple dib br3 pa3 ma2 grow bw2 shadow-5'>
+            <Link to="/dash/book3" className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'>        
+            <div>
+                <h2>The story of my life</h2>
+                <p>Click me!</p>
+            </div>
+            </Link></div>
 
         </div>
 
