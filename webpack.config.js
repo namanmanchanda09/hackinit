@@ -5,8 +5,10 @@ module.exports={
     entry:['./src/index'],
     output:{
         path:path.join(__dirname, 'build'),
-        filename:'main.js',
+        filename:'main.js'
+        
     },
+    
     devServer:{
         hot:true,
         contentBase:'./public',
